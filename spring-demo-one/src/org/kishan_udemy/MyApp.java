@@ -7,14 +7,14 @@ public class MyApp {
 		
 		//this is just simple creating instance of the BaseballCoach Class
 		/*
-		BaseballCoach thecoach = new BaseballCoach();
-		System.out.println(thecoach.getDailyWorkout());*/
+		BaseballCoach theCoach = new BaseballCoach();
+		System.out.println(theCoach.getDailyWorkout());*/
 		
 		//now we use code to interface
 		//we create instance of the Interface Coach for implementing the methods from interface
 		
-		Coach thecoach = new BaseballCoach();
-		System.out.println(thecoach.getDailyWorkout());
+		Coach theCoach = new TrackCoach();
+		System.out.println(theCoach.getDailyWorkout());
 		
 	}
 
