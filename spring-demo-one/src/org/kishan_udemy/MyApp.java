@@ -11,7 +11,6 @@ public class MyApp {
 		System.out.println(thecoach.getDailyWorkout());*/
 		
 		//now we use code to interface
-		
 		//we create instance of the Interface Coach for implementing the methods from interface
 		
 		Coach thecoach = new BaseballCoach();
