@@ -10,4 +10,10 @@ key points
 	
 	close the context()		
 			context.close();
+			
+			
+			after these above points are considered then : 
+					the app is easily configurable
+					Easily change of coach for specific sport
+						
 	
