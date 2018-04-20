@@ -1,3 +1,4 @@
+
 key points
 	load the Spring configuration file i.e(.xml file)
 			ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");

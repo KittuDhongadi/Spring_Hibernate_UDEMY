@@ -6,8 +6,9 @@ public class MyApp {
 	{
 		
 		//this is just simple creating instance of the BaseballCoach Class
-		/*
-		BaseballCoach theCoach = new BaseballCoach();
+		//Object Creation
+		
+		/*BaseballCoach theCoach = new BaseballCoach();
 		System.out.println(theCoach.getDailyWorkout());*/
 		
 		//now we use code to interface
