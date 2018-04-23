@@ -4,7 +4,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class BeanAnnotationMain {
-	
 	public static void main(String args[])
 	{
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");

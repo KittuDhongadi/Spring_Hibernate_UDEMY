@@ -14,5 +14,5 @@
     http://www.directwebremoting.org/schema/spring-dwr-3.0.xsd">
 
    <context:component-scan base-package="org.spring.annotation"/>
-
+   
 </beans>
