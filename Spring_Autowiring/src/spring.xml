@@ -6,11 +6,11 @@
    xsi:schemaLocation = "http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
    
-   <bean id="myFortuneService" class="org.spring.autowiringCI.HappyFortuneService">
+   <bean id="myFortuneService" class="org.spring.AutowiringSetter.HappyFortuneService">
    </bean>
    
-   <bean id="tennisCoach" class="org.spring.autowiringCI.TennisCoach">
-   <constructor-arg ref="myFortuneService"/>
+   <bean id="tennisCoach" class="org.spring.AutowiringSetter.TennisCoach">
+   <property name="fortuneService" ref="myFortuneService"/>
    </bean>
     
    </beans>
