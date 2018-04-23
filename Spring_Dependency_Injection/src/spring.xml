@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<!-- defining all the beans here!!! -->
+
+<!-- define dependency!!! -->
+
+   <bean id="myFortune" class="org.spring.constructor_injection.HappyFortuneService">
+   </bean>
+      
+ <!--   <bean id="myCoach" class="org.spring.constructor_injection.BaseBallCoach">
+   </bean> -->
+   
+   <!-- Seting up the constructor Injection -->
+   <bean id="Baseball" class="org.spring.constructor_injection.TrackCoach">
+   <constructor-arg ref="myFortune"/>
+  <!--  <constructor-arg value="Monday"/> -->
+   </bean>
+
+</beans>
