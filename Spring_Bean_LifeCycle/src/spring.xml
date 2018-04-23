@@ -1,16 +1,15 @@
-<?xml version = "1.0" encoding = "UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <beans xmlns = "http://www.springframework.org/schema/beans"
    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation = "http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-
-   <bean id="myCoach" class="org.kishan_udemy.TrackCoach">
+   
+   <bean id="myFortuneService" class="org.spring.bean_scope.HappyFortuneService">
    </bean>
    
-   <bean id="Baseball" class="org.kishan_udemy.BaseballCoach">
+   <bean id="myCoach" class="org.spring.bean_scope.TrackCoach" scope="prototype">
+   <constructor-arg ref="myFortuneService"/>
    </bean>
-    <bean id="Cricket" class="org.kishan_udemy.CricketCoach">
-   </bean>
-
-</beans>
+    
+   </beans>

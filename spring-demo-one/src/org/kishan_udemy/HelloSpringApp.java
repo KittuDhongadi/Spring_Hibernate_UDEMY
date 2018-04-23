@@ -9,14 +9,16 @@ public class HelloSpringApp {
 	public static void main(String args[])
 	{
 		//ClassPathXmlApplicationContext
-		//	load the Spring configuration file i.e(.xml file)
+		//load the Spring configuration file i.e(.xml file)
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 		
 		//retrieve bean Spring Container
-		Coach theCoach = (Coach)context.getBean("Cricket",Coach.class);
+		Coach theCoach = context.getBean("Baseball",Coach.class);
 		
 		//call methods related to bean
 		System.out.println(theCoach.getDailyWorkout());
+		
+		System.out.println(theCoach.getDailyFortune());
 		
 		//close the context()		
 		context.close();
