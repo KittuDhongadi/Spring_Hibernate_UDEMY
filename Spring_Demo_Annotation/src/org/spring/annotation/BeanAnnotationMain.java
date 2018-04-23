@@ -9,7 +9,7 @@ public class BeanAnnotationMain {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 		
 		//retrieve bean Spring Container
-		Coach theCoach = context.getBean("SillyCoach",Coach.class);
+		Coach theCoach = context.getBean("tennisCoach",Coach.class);
 		
 		System.out.println(theCoach.getDailyWorkout());
 		
