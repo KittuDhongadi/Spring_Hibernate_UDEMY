@@ -8,7 +8,7 @@
    <bean id="myFortuneService" class="org.spring.bean_scope.HappyFortuneService">
    </bean>
    
-   <bean id="myCoach" class="org.spring.bean_scope.TrackCoach" scope="prototype">
+   <bean id="myCoach" class="org.spring.bean_scope.TrackCoach">
    <constructor-arg ref="myFortuneService"/>
    </bean>
     
