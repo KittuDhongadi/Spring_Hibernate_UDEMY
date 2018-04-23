@@ -1,6 +1,8 @@
 package org.spring.Bean_LifeCycle;
 
-public class TrackCoach implements Coach{
+public class TrackCoach implements Coach
+{
+	
 	private FortuneService fortuneService;
 	
 	public TrackCoach(FortuneService fortuneService) {

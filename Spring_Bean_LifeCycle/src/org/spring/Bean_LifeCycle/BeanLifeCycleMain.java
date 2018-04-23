@@ -11,16 +11,8 @@ public class BeanLifeCycleMain {
 		//retrieve bean Spring Container
 		Coach theCoach = context.getBean("myCoach",Coach.class);
 		
-		Coach alphaCoach = context.getBean("myCoach",Coach.class);
-
-		boolean result = (theCoach==alphaCoach);
-		
-		System.out.println("Pointing to same Object : "+result);
-		 
-		System.out.println("Memory location for theCoach : "+theCoach);
-		
-		System.out.println("Memory location for alphaCoach : "+alphaCoach);
-
+		System.out.println(theCoach.getDailyFortune());
+		System.out.println(theCoach.getDailyWorkout());
 		//close the context()		
 		context.close();
 		}

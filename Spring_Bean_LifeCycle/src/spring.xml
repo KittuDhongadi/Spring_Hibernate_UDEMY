@@ -5,10 +5,10 @@
    xsi:schemaLocation = "http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
    
-   <bean id="myFortuneService" class="org.spring.bean_scope.HappyFortuneService">
+   <bean id="myFortuneService" class="org.spring.Bean_LifeCycle.HappyFortuneService">
    </bean>
    
-   <bean id="myCoach" class="org.spring.bean_scope.TrackCoach" scope="prototype">
+   <bean id="myCoach" class="org.spring.Bean_LifeCycle.TrackCoach" init-method="initialise" destroy-method="destroy">
    <constructor-arg ref="myFortuneService"/>
    </bean>
     
