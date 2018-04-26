@@ -1,0 +1,30 @@
+Java Configuration
+	instead of configuring spring container with Spring.xml
+	Configure Spring Container with Java Code(No XML file)
+	
+3 ways
+	i)  Full XML Config
+	ii) Xml Component SCAN
+	iii)Java Configuration Class
+	
+Development Process
+	1) Create Java Class and Annotate as @Configaration	
+		@Configaration
+		public class SportConfig
+		{
+		.
+		.
+		}
+	2) Add Component Scanning Support : @ComponentScan(Optional)
+		@Configaration
+		@ComponentScan("Package name")//package to scan
+		public class SportConfig
+		{
+		.
+		.
+		}
+	3) Read Spring Java Configuration Class
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("sportConfig.class");
+	4) Retrieve Bean From Spring Container
+		Coach theCoach = context.getBean("tennisCoach", Coach.class);	
+	
