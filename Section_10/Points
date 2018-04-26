@@ -66,3 +66,37 @@ Development Process
 	Coach theCoach = context.getBean("swimCoach",Coach.class);
 	//swimCoach bean ID
 	
+	
+	
+	***********************************************************
+	
+	
+	
+	
+	
+90th Video Injecting values from Property Value
+	
+Development Process
+	1) Create Properties File
+		sport.properties
+			foo.email=kishan.dhongadi@gmail.com
+			foo.team=Awesome Java Coders
+			
+	2) Load Properties File in Spring Config
+		@Configuration
+		@PropertySource("Class path of .property file");
+		public class SportConfig
+		{
+		.
+		.
+		}
+	3) reference values from property file
+	public class SwimCoach Implmenets Coach
+	{
+	@Value("${foo.email}")
+	private String email
+	
+	@Value("${foo.team}")
+	private String team
+	
+	}
