@@ -26,5 +26,43 @@ Development Process
 	3) Read Spring Java Configuration Class
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("sportConfig.class");
 	4) Retrieve Bean From Spring Container
-		Coach theCoach = context.getBean("tennisCoach", Coach.class);	
+		Coach theCoach = context.getBean("tennisCoach", Coach.class);
+		
+		
+Development Process
+	1) Define method to expose bean
+		@Configaration
+		public class SportConfig
+		{
+		@Bean
+		public Coach swimCoach()
+			{
+		SwimCoach mySwimCoach = new SwinCoach();
+		return mySwimCoach;//create instance of SwimCoach and return
+			}
+		}
+	2) inject bean dependencies
+		@Configaration
+		public class SportConfig
+		{
+		@Bean
+		public FortuneService happyFortuneService()
+			{
+			return new HappyFortuneService();
+			}
+		@Bean
+		public Coach swimCoach()
+			{
+		SwimCoach mySwimCoach = new SwinCoach(happyFortuneService());
+		return mySwimCoach;//inject happyFortuneService()
+			}
+		}
+	
+	3) Read Spring Java Configuration class
+	AnnotationConfigApplicationContext context = 
+				new AnnotationConfigApplicationContext(SportConfig.class);
+	
+	4) Retrieve bean from Spring Container
+	Coach theCoach = context.getBean("swimCoach",Coach.class);
+	//swimCoach bean ID
 	
