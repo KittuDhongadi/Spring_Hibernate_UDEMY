@@ -11,8 +11,8 @@
 <body>
 
 The customer is confirmed: ${customer.firstName} ${customer.lastName}
-free passes : ${customer.freePasses} }
-
+free passes : ${customer.freePasses} 
+postalCode : ${customer.postalCode} 
 </body>
 
 </html>
